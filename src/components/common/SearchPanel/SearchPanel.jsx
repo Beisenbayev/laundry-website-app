@@ -1,8 +1,8 @@
 import React from 'react';
 import { FiSearch } from 'react-icons/fi';
-import s from './Search.module.css';
+import s from './SearchPanel.module.css';
 
-const Search = (props) => {
+const SearchPanel = (props) => {
    return (
       <div className={s.block}>
          <i><FiSearch /></i>
@@ -12,4 +12,4 @@ const Search = (props) => {
 }
 
 
-export default Search;
+export default SearchPanel;

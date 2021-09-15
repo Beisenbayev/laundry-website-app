@@ -1,12 +1,19 @@
-.label {
+.textInput {
    display: block;
    width: 100%;
-   padding: 24px 0 23px;
-   border-bottom: 1px solid #EDF2FF;
+   padding: 24px 0 22px;
+   border-bottom: 2px solid #EDF2FF;
+   font-size: 16px;
+   font-weight: 300;
    line-height: 1;
-   color: #B0B3BC;
 
-   input {
-      display: none;
+   &::placeholder {
+      color: #B0B3BC;
+   }
+}
+.textInput.hasError {
+   border-bottom: 2px solid #FF5050;
+   &::placeholder {
+      color: #FF5050;
    }
 }

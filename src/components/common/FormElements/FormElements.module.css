@@ -1,12 +1,45 @@
-.label {
+.textInput {
   display: block;
   width: 100%;
-  padding: 24px 0 23px;
-  border-bottom: 1px solid #EDF2FF;
+  padding: 24px 0 22px;
+  border-bottom: 2px solid #EDF2FF;
+  font-size: 16px;
+  font-weight: 300;
   line-height: 1;
+}
+
+.textInput::-webkit-input-placeholder {
   color: #B0B3BC;
 }
 
-.label input {
-  display: none;
+.textInput:-ms-input-placeholder {
+  color: #B0B3BC;
+}
+
+.textInput::-ms-input-placeholder {
+  color: #B0B3BC;
+}
+
+.textInput::placeholder {
+  color: #B0B3BC;
+}
+
+.textInput.hasError {
+  border-bottom: 2px solid #FF5050;
+}
+
+.textInput.hasError::-webkit-input-placeholder {
+  color: #FF5050;
+}
+
+.textInput.hasError:-ms-input-placeholder {
+  color: #FF5050;
+}
+
+.textInput.hasError::-ms-input-placeholder {
+  color: #FF5050;
+}
+
+.textInput.hasError::placeholder {
+  color: #FF5050;
 }

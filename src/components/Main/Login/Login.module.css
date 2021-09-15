@@ -1,1 +1,7 @@
-/* No CSS */
+.block h2 {
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  color: #172853;
+}

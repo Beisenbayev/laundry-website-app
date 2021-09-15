@@ -1,7 +1,7 @@
 import React from 'react';
-import s from './Service.module.css';
+import s from './Services.module.css';
 
-const Service = (props) => {
+const Services = (props) => {
    return (
       <div className={s.block}>
 
@@ -10,4 +10,4 @@ const Service = (props) => {
 }
 
 
-export default Service;
+export default Services;

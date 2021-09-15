@@ -1,8 +1,8 @@
 import React from 'react';
 import { BiUserCircle } from 'react-icons/bi';
-import s from './User.module.css';
+import s from './UserPanel.module.css';
 
-const User = ({ username, ...props }) => {
+const UserPanel = ({ username, ...props }) => {
    return (
       <div className={s.block}>
          <span>{username ? username : 'Войти'}</span>
@@ -12,4 +12,4 @@ const User = ({ username, ...props }) => {
 }
 
 
-export default User;
+export default UserPanel;
