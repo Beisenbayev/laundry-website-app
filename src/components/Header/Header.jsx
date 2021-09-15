@@ -4,8 +4,8 @@ import s from './Header.module.css';
 import Wrapper from '../common/Wrapper/Wrapper';
 import StyledLink from '../common/StyledLink/StyledLink';
 import Logotype from '../common/Logotype/Logotype';
-import Search from '../common/Search/Search';
-import User from '../common/User/User';
+import SearchPanel from '../common/SearchPanel/SearchPanel';
+import UserPanel from '../common/UserPanel/UserPanel';
 
 const Header = (props) => {
 	return (
@@ -23,10 +23,10 @@ const Header = (props) => {
 
 					<div className={s.rightSide}>
 						<div className={s.searchPanel}>
-							<Search />
+							<SearchPanel />
 						</div>
 						<div className={s.user}>
-							<User />
+							<UserPanel />
 						</div>
 					</div>
 				</div>
