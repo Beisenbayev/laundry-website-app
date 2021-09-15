@@ -1,0 +1,45 @@
+.block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 248px;
+  height: 46px;
+  padding: 11px 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #fff;
+  color: #B0B3BC;
+}
+
+.block i {
+  height: 17px !important;
+  font-size: 17px;
+}
+
+.block input {
+  width: 100%;
+  margin-left: 10px;
+  border: none;
+  font-weight: 300;
+  background: inherit;
+  color: #172853;
+}
+
+.block input::-webkit-input-placeholder {
+  color: #B0B3BC !important;
+}
+
+.block input:-ms-input-placeholder {
+  color: #B0B3BC !important;
+}
+
+.block input::-ms-input-placeholder {
+  color: #B0B3BC !important;
+}
+
+.block input::placeholder {
+  color: #B0B3BC !important;
+}

@@ -1,0 +1,31 @@
+.block {
+   padding: 40px 0;
+   background: inherit;
+}
+.inner {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   align-items: center;
+}
+
+.links {
+   li {
+      display: inline-block;
+      margin-right: 60px;
+      &:last-child {
+         margin: 0;
+      }
+   }
+}
+
+.logo {
+   text-align: center;
+}
+
+.rightSide {
+   display: flex;
+   align-items: center;
+}
+.user {
+   margin-left: 35px;
+}

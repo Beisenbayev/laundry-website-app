@@ -1,9 +1,13 @@
 import React from "react";
 import s from './App.module.css';
 
+import Header from "./components/Header/Header";
+
 const App = (props) => {
 	return (
-		<div></div>
+		<div className={s.block}>
+			<Header />
+		</div>
 	);
 }
 

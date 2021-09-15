@@ -1,0 +1,21 @@
+.block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+  color: #172853;
+  cursor: pointer;
+}
+
+.block span {
+  font-weight: 500;
+}
+
+.block i {
+  height: 24px !important;
+  margin-left: 15px;
+  font-size: 24px;
+}

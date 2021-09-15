@@ -15,3 +15,9 @@
    font-weight: 700;
    src: local('MuseoSansCyrl'), url(./Museo-Sans-Cyrl/MuseoSansCyrl_Bold.otf) format('opentype');
 }
+
+@font-face {
+   font-family: 'MuseoSansCyrl';
+   font-weight: 900;
+   src: local('MuseoSansCyrl'), url(./Museo-Sans-Cyrl/MuseoSansCyrl_Black.otf) format('opentype');
+}

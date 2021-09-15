@@ -1,0 +1,17 @@
+.block {
+   display: flex;
+   align-items: center;
+   font-size: 17px;
+   color: #172853;
+   cursor: pointer;
+
+   span {
+      font-weight: 500;
+   }
+
+   i {
+      height: 24px !important;
+      margin-left: 15px;
+      font-size: 24px;
+   }
+}

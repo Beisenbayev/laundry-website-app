@@ -11,12 +11,16 @@ body {
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1;
+	background: #f8f8fa;
   	user-select: none;
 }
 a { text-decoration: none; }
 li { list-style: none; }
 button { font-family: 'MuseoSansCyrl'; }
-input, textarea { outline:none; }
+input, textarea { 
+	font-family: 'MuseoSansCyrl';
+	outline:none; 
+}
 input:active, 
 textarea:active { outline:none; }
 :focus { outline:none; }

@@ -1,0 +1,6 @@
+.block {
+  max-width: 1215px;
+  min-width: 1215px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
