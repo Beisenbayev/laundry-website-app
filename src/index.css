@@ -15,7 +15,7 @@ body {
 }
 a { text-decoration: none; }
 li { list-style: none; }
-
+button { font-family: 'MuseoSansCyrl'; }
 input, textarea { outline:none; }
 input:active, 
 textarea:active { outline:none; }
