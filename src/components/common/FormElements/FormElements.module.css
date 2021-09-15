@@ -1,0 +1,12 @@
+.label {
+  display: block;
+  width: 100%;
+  padding: 24px 0 23px;
+  border-bottom: 1px solid #EDF2FF;
+  line-height: 1;
+  color: #B0B3BC;
+}
+
+.label input {
+  display: none;
+}

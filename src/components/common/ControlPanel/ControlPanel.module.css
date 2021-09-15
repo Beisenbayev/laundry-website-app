@@ -1,0 +1,27 @@
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 31px;
+  height: 31px;
+  max-width: 31px;
+  max-height: 31px;
+  border-radius: 0px 8px;
+  background: #EDEFF6;
+  color: #B0B3BC;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #B0B3BC;
+  color: #EDEFF6;
+}

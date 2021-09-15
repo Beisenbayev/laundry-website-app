@@ -2,7 +2,7 @@ import React from 'react';
 import {
    FaQuestion,
    FaTimes
-} from 'react-icons';
+} from 'react-icons/fa';
 import cn from 'classnames';
 import s from './ControlPanel.module.css';
 
