@@ -21,7 +21,7 @@ const LoginForm = (props) => {
                .min(1, 'Некорректный логин'),
          })}
          onSubmit={(values) => {
-            console.log(values);
+            props.submit(values);
          }}>
          <Form className={s.form}>
             <MyInput name={'email'}
@@ -30,6 +30,9 @@ const LoginForm = (props) => {
             <MyInput name={'password'}
                type={'password'}
                placeholder={'Пароль'} />
+            <span className={s.errorText}>
+               {props.errorMessage && props.errorMessage}
+            </span>
             <Button type='submit'
                text={'Войти'} />
          </Form>

@@ -13,7 +13,9 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  min-width: 1215px;
   height: 100vh;
+  padding: 0 15px;
   background: rgba(0, 0, 0, 0.8);
 }
 
