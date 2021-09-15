@@ -1,0 +1,29 @@
+.block {
+   padding: 32px 0;
+   background: #FFFFFF;
+}
+.inner {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.networks {
+   height: 27px;
+   font-size: 27px;
+   a {
+      margin: 0 27px;
+      color: #172853;
+      &:hover {
+         color: #4376FB;
+      }
+   }
+}
+
+.phoneNumber {
+   font-weight: 700;
+   font-size: 17px;
+   a {
+      color: #172853;
+   }
+}
