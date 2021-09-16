@@ -1,0 +1,20 @@
+.block {
+   h1 {
+      margin-bottom: 55px;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      color: #B0B3BC;
+
+      span {
+         text-decoration: underline;
+         color: #172853;
+      }
+   }
+}
+.serviseItems {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-column-gap: 40px;
+   grid-row-gap: 35px;
+}

@@ -31,9 +31,9 @@ export const setCategoriesThunkCreater = () => {
    }
 }
 
-export const setProductsThunkCreater = () => {
+export const setProductsThunkCreater = (category, search) => {
    return async (dispatch) => {
-      const response = await productsAPI.getProductsRequest();
+      const response = await productsAPI.getProductsRequest(category, search);
       dispatch(setProductsAC(response));
    }
 }

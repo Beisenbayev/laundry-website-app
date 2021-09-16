@@ -3,7 +3,9 @@
    padding: 22px 14px;
    border-radius: 8px;
    background: #FFFFFF;
+   transition: 0.2s;
    &:hover {
+      margin: -7px 0 7px;
       h3 {
          text-decoration: underline;
       }

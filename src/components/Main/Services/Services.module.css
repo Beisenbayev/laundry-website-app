@@ -1,1 +1,21 @@
-/* No CSS */
+.block h1 {
+  margin-bottom: 55px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #B0B3BC;
+}
+
+.block h1 span {
+  text-decoration: underline;
+  color: #172853;
+}
+
+.serviseItems {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 35px;
+}

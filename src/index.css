@@ -8,10 +8,11 @@
 }
 body {
 	font-family: 'MuseoSansCyrl';
-	font-weight: 500;
 	font-size: 14px;
+	font-weight: 500;
 	line-height: 1;
 	background: #f8f8fa;
+	color: #172853;
   	user-select: none;
 }
 a { text-decoration: none; }

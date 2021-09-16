@@ -3,6 +3,12 @@
   padding: 22px 14px;
   border-radius: 8px;
   background: #FFFFFF;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.block:hover {
+  margin: -7px 0 7px;
 }
 
 .block:hover h3 {
