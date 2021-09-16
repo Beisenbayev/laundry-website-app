@@ -17,7 +17,7 @@ const Main = (props) => {
             <Switch>
                <Route path='/login' render={() => <Login />} />
                <Route path='/services/:categoryId' render={() => <Services />} />
-               <Route path='/search' render={() => <Search />} />
+               <Route path='/search/:serviceName' render={() => <Search />} />
                <Route path='/basket' render={() => <Basket />} />
                <Route path='/profile' render={() => <Profile />} />
                <Route exact path='/' render={() => <Categories />} />
