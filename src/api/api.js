@@ -3,6 +3,7 @@ import axios from 'axios';
 const instance = axios.create({
    baseURL: 'https://api.doover.tech/api/',
    headers: {
+      'Authorization':`Bearer ${localStorage.getItem('token')}`,
       'Content-Type': 'application/json',
    },
 });

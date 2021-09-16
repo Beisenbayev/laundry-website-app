@@ -1,4 +1,5 @@
 import { authAPI } from "../../api/api.js";
+import { setUserDataThunkCreater } from './user-reducer.js';
 
 const authReducerID = 'laundry-website/authReducer';
 const SET_TOKEN = `${authReducerID}/SET_TOKEN`;
@@ -28,8 +29,9 @@ export const loginThunkCreater = (data) => {
    return async (dispatch) => {
       try {
          const response = await authAPI.getTokenRequest(data);
-         console.log(response);
-         const token = await authAPI.verifyTokenRequest(response.access);
+         const tokenVerify = await authAPI.verifyTokenRequest(response.access);
+         localStorage.setItem('token', response.access);
+         dispatch(setUserDataThunkCreater());
          dispatch(setTokenAC(response.access));
          dispatch(setErrorMessageAC(null));
       } catch {

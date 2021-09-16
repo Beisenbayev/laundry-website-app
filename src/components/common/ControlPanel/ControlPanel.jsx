@@ -8,16 +8,16 @@ import s from './ControlPanel.module.css';
 
 export const CloseButton = (props) => {
    return (
-      <div className={cn(s.button, s.CloseButton)}>
-         <FaQuestion />
-      </div>
+      <button className={cn(s.button, s.CloseButton)} {...props}>
+         <FaTimes />
+      </button>
    );
 }
 
 export const DescriptionButton = (props) => {
    return (
       <div className={cn(s.button, s.DescriptionButton)}>
-         <FaTimes />
+         <FaQuestion />
       </div>
    );
 }
