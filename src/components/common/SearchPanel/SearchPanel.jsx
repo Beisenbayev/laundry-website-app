@@ -6,7 +6,7 @@ import s from './SearchPanel.module.css';
 const SearchPanel = (props) => {
    const history = useHistory();
 
-   const handleSubmit = (event) => {
+   const handleChange = (event) => {
       if (event.currentTarget.value === '') history.push('/');
       else history.push(`/search/${event.currentTarget.value}`);
    }
@@ -16,7 +16,7 @@ const SearchPanel = (props) => {
          <i><FiSearch /></i>
          <input type='search' 
             placeholder='Найти вещь'
-            onChange={handleSubmit} />
+            onChange={handleChange} />
       </div>
    );
 }

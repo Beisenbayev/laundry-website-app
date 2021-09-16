@@ -16,11 +16,11 @@ export const MyInput = ({ placeholder, ...props }) => {
 }
 
 export const MyToggleSwitch = ({ checked, ...props }) => {
-   const [field] = useField(props);
-
    return (
       <div className={s.toggleContainer}>
-         <input type="checkbox" className={s.toggleButton} checked={checked} {...field} />
+         <input type="checkbox"
+            className={s.toggleButton}
+            checked={checked} {...props} />
       </div>
    );
 }

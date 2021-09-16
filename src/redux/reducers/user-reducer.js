@@ -43,7 +43,6 @@ const setIsActiveAC = (isActive) => ({ type: SET_IS_ACTIVE, isActive });
 export const setUserDataThunkCreater = () => {
    return async (dispatch) => {
       const response = await userAPI.getUserDataRequest();
-      console.log(response);
       dispatch(setUserDataAC(response));
    }
 }
@@ -51,7 +50,6 @@ export const setUserDataThunkCreater = () => {
 export const updateUserSettingsThunkCreater = (notify) => {
    return async (dispatch) => {
       const response = await userAPI.updateUserSettingRequest(notify);
-      console.log(response);
       dispatch(setUserSettingsAC(response));
    }
 }

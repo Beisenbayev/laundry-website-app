@@ -21,15 +21,15 @@ export const authAPI = {
 
 export const userAPI = {
    getUserDataRequest: async () => {
-      const response = await instance.get('users/me');
+      const response = await instance.get('users/me/');
       return response.data;
    },
    getUserSettingsRequest: async () => {
-      const response = await instance.get('users​/settings​');
+      const response = await instance.get('users/settings/');
       return response.data;
    },
    updateUserSettingRequest: async (notify) => { //{notify}
-      const response = await instance.put('users​/settings​', { notify });
+      const response = await instance.put('users/settings/', { notify });
       return response.data;
    }
 }
