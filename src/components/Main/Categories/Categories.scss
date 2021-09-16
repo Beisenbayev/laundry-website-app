@@ -1,0 +1,14 @@
+.block {
+   h1 {
+      margin-bottom: 55px;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      color: #172853;
+   }
+}
+.categoryItems {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 35px;
+}
