@@ -19,7 +19,7 @@ const Search = (props) => {
 
    const ServiceItems = services ? services.map(servise => {
       return <ServiceItem key={servise.uuid}
-         id={servise.id}
+         id={servise.uuid}
          category={servise.category}
          name={servise.name}
          picture={servise.picture}

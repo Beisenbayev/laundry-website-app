@@ -57,6 +57,7 @@ export const updateUserSettingsThunkCreater = (notify) => {
 export const logoutThunkCreater = () => {
    return async (dispatch) => {
       dispatch(setIsActiveAC(false));
+      localStorage.clear();
    }
 }
 

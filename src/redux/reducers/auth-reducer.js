@@ -31,8 +31,8 @@ export const loginThunkCreater = (data) => {
          const response = await authAPI.getTokenRequest(data);
          const tokenVerify = await authAPI.verifyTokenRequest(response.access);
          localStorage.setItem('token', response.access);
-         dispatch(setUserDataThunkCreater());
          dispatch(setTokenAC(response.access));
+         dispatch(setUserDataThunkCreater());
          dispatch(setErrorMessageAC(null));
       } catch {
          dispatch(setErrorMessageAC('Что-то пошло не так, попробуйте ещё раз'));
