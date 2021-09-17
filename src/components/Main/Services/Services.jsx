@@ -8,19 +8,20 @@ import {
 } from '../../../redux/reducers/products-reducer.js';
 import s from './Services.module.css';
 
-import ServiseItem from './ServiseItem/ServiseItem';
+import ServiceItem from './ServiceItem/ServiceItem';
 
 const Services = (props) => {
    const dispatch = useDispatch();
    const categories = useSelector(state => state.products.categories);
    const services = useSelector(state => state.products.productsList);
+   const selectedServices = useSelector(state => state.products.selectedServices);
 
    const { categoryId } = useParams();
    const categoryName = categories.filter(category => category.uuid === categoryId)[0].name;
 
-   const serviseItems = services ? services.map(servise => {
-      return <ServiseItem key={servise.uuid}
-         id={servise.id}
+   const ServiceItems = services ? services.map(servise => {
+      return <ServiceItem key={servise.uuid}
+         id={servise.uuid}
          category={servise.category}
          name={servise.name}
          picture={servise.picture}
@@ -31,13 +32,17 @@ const Services = (props) => {
 
    useEffect(() => {
       dispatch(setProducts(categoryId, ''));
+
+      return () => {
+         localStorage.setItem('selectedServices', JSON.stringify(selectedServices));
+      }
    }, [categoryId]);
 
    return (
       <div className={s.block}>
          <h1>Главная/ <span>{categoryName}</span></h1>
-         <div className={s.serviseItems}>
-            {serviseItems}
+         <div className={s.ServiceItems}>
+            {ServiceItems}
          </div>
       </div>
    );

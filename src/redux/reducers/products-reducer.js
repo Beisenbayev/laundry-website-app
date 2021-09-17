@@ -7,6 +7,7 @@ const SET_PRODUCTS = `${productsReducerID}/SET_PRODUCTS`;
 const initialState = {
    categories: null,
    productsList: null,
+   selectedServices: {},
 }
 
 const productsReducer = (state = initialState, action) => {

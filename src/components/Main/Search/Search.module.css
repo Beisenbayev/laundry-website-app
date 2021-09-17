@@ -11,7 +11,7 @@
   color: #172853;
 }
 
-.serviseItems {
+.ServiceItems {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
