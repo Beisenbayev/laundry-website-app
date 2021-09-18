@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { secondToDay } from '../../../../utils/timeConverter.js';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
+import {
+   updateSelectedServicesThunkCreater as updateSelectedServices
+} from '../../../../redux/reducers/products-reducer.js';
 import s from './BasketItem.module.css';
 
 import ModalWindow from '../../../common/ModalWindow/ModalWindow';
 import { CloseButton, DescriptionButton } from '../../../common/ControlPanel/ControlPanel';
 
 const BasketItem = (props) => {
+   const dispatch = useDispatch();
    const selectedServices = useSelector(state => state.products.selectedServices);
 
    let [quantity, setQuantity] = useState(selectedServices[props.id] || 0);
@@ -15,17 +19,17 @@ const BasketItem = (props) => {
 
    const handleIncrease = (serviceId) => {
       setQuantity(quantity += 1);
-      selectedServices[serviceId] = quantity;
+      dispatch(updateSelectedServices({ [serviceId]: quantity }));
    }
 
    const handleDecrease = (serviceId) => {
       setQuantity(quantity -= 1);
-      selectedServices[serviceId] = quantity;
-      selectedServices[serviceId] === 0 && delete selectedServices[serviceId];
+      dispatch(updateSelectedServices({ [serviceId]: quantity }));
    }
 
-   const handleRemoveItem = (id) => {
-      delete selectedServices[id];
+   const handleRemoveItem = (serviceId) => {
+      setQuantity(0);
+      dispatch(updateSelectedServices({ [serviceId]: 0 }));
    }
 
    const toggleHintState = () => {

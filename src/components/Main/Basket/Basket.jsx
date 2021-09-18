@@ -44,8 +44,9 @@ const Basket = (props) => {
 
    useEffect(() => {
       dispatch(setBasketProducts());
+      localStorage.setItem('selectedServices', JSON.stringify(selectedServices));
       // eslint-disable-next-line react-hooks/exhaustive-deps
-   }, []);
+   }, [selectedServices]);
 
    return (
       <>

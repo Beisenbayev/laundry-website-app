@@ -4,6 +4,7 @@
   display: -ms-flexbox;
   display: flex;
   max-height: 125px;
+  margin-bottom: 35px;
   padding: 30px 35px 35px 50px;
   border-radius: 8px;
   background: #FFFFFF;

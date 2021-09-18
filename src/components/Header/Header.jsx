@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import s from './Header.module.css';
 
 import Wrapper from '../common/Wrapper/Wrapper';
@@ -8,13 +9,16 @@ import SearchPanel from '../common/SearchPanel/SearchPanel';
 import UserPanel from '../common/UserPanel/UserPanel';
 
 const Header = (props) => {
+	const selectedServices = useSelector(state => state.products.selectedServices);
+	const basketItems = Object.keys(selectedServices).length;
+
 	return (
 		<header className={s.block}>
 			<Wrapper>
 				<div className={s.inner}>
 					<ul className={s.links}>
 						<li><StyledLink to='/'>Главная</StyledLink></li>
-						<li><StyledLink to='/basket'>Корзина</StyledLink></li>
+						<li><StyledLink to='/basket'>Корзина {basketItems ? `(${basketItems})`: ''}</StyledLink></li>
 					</ul>
 
 					<div className={s.logo}>

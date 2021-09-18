@@ -32,10 +32,7 @@ const Services = (props) => {
 
    useEffect(() => {
       dispatch(setProducts(categoryId, ''));
-
-      return () => {
-         localStorage.setItem('selectedServices', JSON.stringify(selectedServices));
-      }
+      localStorage.setItem('selectedServices', JSON.stringify(selectedServices));
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [categoryId]);
 

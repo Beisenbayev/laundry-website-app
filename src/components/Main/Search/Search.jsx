@@ -30,10 +30,7 @@ const Search = (props) => {
 
    useEffect(() => {
       dispatch(setProducts('', serviceName));
-
-      return () => {
-         localStorage.setItem('selectedServices', JSON.stringify(selectedServices));
-      }
+      localStorage.setItem('selectedServices', JSON.stringify(selectedServices));
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [serviceName]);
 

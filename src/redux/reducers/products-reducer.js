@@ -4,13 +4,14 @@ const productsReducerID = 'laundry-website/productsReducer';
 const SET_CATEGORIES = `${productsReducerID}/SET_CATEGORIES`;
 const SET_PRODUCTS = `${productsReducerID}/SET_PRODUCTS`;
 const SET_BASKET_LIST = `${productsReducerID}/SET_BASKET_LIST`;
+const UPDATE_SELECTED_SERVICES = `${productsReducerID}/UPDATE_SELECTED_SERVICES`;
 const FINISH_SHOPPING = `${productsReducerID}/FINISH_SHOPPING`;
 
 const initialState = {
-   categories: null,
-   productsList: null,
-   basketList: [],
-   selectedServices: {},
+   categories: null, //main categories
+   productsList: null, //services
+   basketList: [], //data of services wich were selected (from server)
+   selectedServices: {}, //services wich were selected (only list)
 }
 
 const productsReducer = (state = initialState, action) => {
@@ -24,6 +25,13 @@ const productsReducer = (state = initialState, action) => {
       case SET_BASKET_LIST: {
          return { ...state, basketList: action.basketList };
       }
+      case UPDATE_SELECTED_SERVICES: {
+         const asArray = Object.entries({ ...state.selectedServices, ...action.service });
+         const filtered = asArray.filter(([key, value]) => value > 0);
+         const filteredObject = Object.fromEntries(filtered);
+
+         return { ...state, selectedServices: filteredObject }
+      }
       case FINISH_SHOPPING: {
          return { ...state, basketList: [], selectedServices: {} };
       }
@@ -34,6 +42,7 @@ const productsReducer = (state = initialState, action) => {
 const setCategoriesAC = (categories) => ({ type: SET_CATEGORIES, categories });
 const setProductsAC = (products) => ({ type: SET_PRODUCTS, products });
 const setBasketListAC = (basketList) => ({ type: SET_BASKET_LIST, basketList });
+const updateSelectedServicesAC = (service) => ({ type: UPDATE_SELECTED_SERVICES, service });
 const finishShoppingAC = () => ({ type: FINISH_SHOPPING });
 
 export const setCategoriesThunkCreater = () => {
@@ -62,6 +71,12 @@ export const setBasketProductsThunkCreater = () => {
          .then(results => {
             dispatch(setBasketListAC(results))
          });
+   }
+}
+
+export const updateSelectedServicesThunkCreater = (service) => {
+   return (dispatch) => {
+      dispatch(updateSelectedServicesAC(service));
    }
 }
 
