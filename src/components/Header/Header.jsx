@@ -17,7 +17,7 @@ const Header = (props) => {
 			<Wrapper>
 				<div className={s.inner}>
 					<ul className={s.links}>
-						<li><StyledLink to='/'>Главная</StyledLink></li>
+						<li><StyledLink exact to='/'>Главная</StyledLink></li>
 						<li><StyledLink to='/basket'>Корзина {basketItems ? `(${basketItems})`: ''}</StyledLink></li>
 					</ul>
 
