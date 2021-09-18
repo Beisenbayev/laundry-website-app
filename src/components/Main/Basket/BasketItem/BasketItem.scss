@@ -6,6 +6,10 @@
    padding: 30px 35px 35px 50px;
    border-radius: 8px;
    background: #FFFFFF;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
 }
 
 .picture {
