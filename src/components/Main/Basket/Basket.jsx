@@ -4,6 +4,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import withAuthRedirect from '../../../hoc/withAuthRedirect.js';
 import {
+   getBasketListSelector,
+   getSelectedServicesSelector
+} from '../../../redux/selectors/products-selector.js';
+import {
    setBasketProductsThunkCreater as setBasketProducts,
    finishShoppingThunkCreater as finishShopping,
 } from '../../../redux/reducers/products-reducer.js';
@@ -16,8 +20,8 @@ import BasketItem from './BasketItem/BasketItem.jsx';
 
 const Basket = (props) => {
    const dispatch = useDispatch();
-   const basketList = useSelector(state => state.products.basketList);
-   const selectedServices = useSelector(state => state.products.selectedServices);
+   const basketList = useSelector(state => getBasketListSelector(state));
+   const selectedServices = useSelector(state => getSelectedServicesSelector(state));
    
    const [shopPanelState, setShopPanelState] = useState(false);
    const itemsLength = basketList.length;

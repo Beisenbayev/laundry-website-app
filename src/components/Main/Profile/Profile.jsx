@@ -4,6 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import withAuthRedirect from '../../../hoc/withAuthRedirect.js';
 import {
+   getUserDataSelector
+} from '../../../redux/selectors/user-selector.js';
+import {
    logoutThunkCreater as logout,
    updateUserSettingsThunkCreater as updateUserSettings
 } from '../../../redux/reducers/user-reducer.js';
@@ -16,7 +19,7 @@ import { MyToggleSwitch } from '../../common/FormElements/FormElements';
 const Profile = (props) => {
    const history = useHistory();
    const dispatch = useDispatch();
-   const profile = useSelector(state => state.profile.userData);
+   const profile = useSelector(state => getUserDataSelector(state));
    
    const username = profile.username;
    const notifyState = profile.settings.notify;

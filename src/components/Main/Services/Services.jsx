@@ -4,6 +4,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import withAuthRedirect from '../../../hoc/withAuthRedirect.js';
 import {
+   getCategoriesSelector,
+   getProductsListSelector,
+   getSelectedServicesSelector
+} from '../../../redux/selectors/products-selector.js';
+import {
    setProductsThunkCreater as setProducts
 } from '../../../redux/reducers/products-reducer.js';
 import s from './Services.module.css';
@@ -12,9 +17,9 @@ import ServiceItem from './ServiceItem/ServiceItem';
 
 const Services = (props) => {
    const dispatch = useDispatch();
-   const categories = useSelector(state => state.products.categories);
-   const services = useSelector(state => state.products.productsList);
-   const selectedServices = useSelector(state => state.products.selectedServices);
+   const categories = useSelector(state => getCategoriesSelector(state));
+   const services = useSelector(state => getProductsListSelector(state));
+   const selectedServices = useSelector(state => getSelectedServicesSelector(state));
 
    const { categoryId } = useParams();
    const categoryName = categories.filter(category => category.uuid === categoryId)[0].name;

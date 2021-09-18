@@ -3,6 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { secondToDay } from '../../../../utils/timeConverter.js';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import {
+   getSelectedServicesSelector
+} from '../../../../redux/selectors/products-selector.js';
+import {
    updateSelectedServicesThunkCreater as updateSelectedServices
 } from '../../../../redux/reducers/products-reducer.js';
 import s from './BasketItem.module.css';
@@ -12,7 +15,7 @@ import { CloseButton, DescriptionButton } from '../../../common/ControlPanel/Con
 
 const BasketItem = (props) => {
    const dispatch = useDispatch();
-   const selectedServices = useSelector(state => state.products.selectedServices);
+   const selectedServices = useSelector(state => getSelectedServicesSelector(state));
 
    let [quantity, setQuantity] = useState(selectedServices[props.id] || 0);
    const [hintState, sethintState] = useState(false);

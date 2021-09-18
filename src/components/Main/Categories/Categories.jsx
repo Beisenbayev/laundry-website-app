@@ -3,6 +3,9 @@ import { compose } from 'redux';
 import { useSelector, useDispatch } from 'react-redux';
 import withAuthRedirect from '../../../hoc/withAuthRedirect';
 import {
+   getCategoriesSelector
+} from '../../../redux/selectors/products-selector.js';
+import {
    setCategoriesThunkCreater as setCategories
 } from '../../../redux/reducers/products-reducer.js';
 import s from './Categories.module.css';
@@ -11,7 +14,7 @@ import CategoryItem from './CategoryItem/CategoryItem';
 
 const Categories = (props) => {
    const dispatch = useDispatch();
-   const categories = useSelector(state => state.products.categories);
+   const categories = useSelector(state => getCategoriesSelector(state));
 
    const categoryItems = categories ? categories.map(category => {
       return <CategoryItem key={category.uuid}

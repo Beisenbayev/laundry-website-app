@@ -4,6 +4,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import withAuthRedirect from '../../../hoc/withAuthRedirect.js';
 import {
+   getProductsListSelector,
+   getSelectedServicesSelector
+} from '../../../redux/selectors/products-selector.js';
+import {
    setProductsThunkCreater as setProducts
 } from '../../../redux/reducers/products-reducer.js';
 import s from './Search.module.css';
@@ -12,8 +16,8 @@ import ServiceItem from '../Services/ServiceItem/ServiceItem';
 
 const Search = (props) => {
    const dispatch = useDispatch();
-   const services = useSelector(state => state.products.productsList);
-   const selectedServices = useSelector(state => state.products.selectedServices);
+   const services = useSelector(state => getProductsListSelector(state));
+   const selectedServices = useSelector(state => getSelectedServicesSelector(state));
 
    const { serviceName } = useParams();
 

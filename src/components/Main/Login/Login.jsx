@@ -2,6 +2,12 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import {
+   getIsActiveSelector
+} from '../../../redux/selectors/user-selector.js';
+import {
+   getErrorMessageSelector
+} from '../../../redux/selectors/auth-selector.js';
+import {
    loginThunkCreater as login
 } from '../../../redux/reducers/auth-reducer.js';
 import s from './Login.module.css';
@@ -11,8 +17,8 @@ import LoginForm from './LoginForm/LoginForm';
 
 const Login = (props) => {
    const dispatch = useDispatch();
-   const isActive = useSelector(state => state.profile.isActive);
-   const errorMessage = useSelector(state => state.auth.errorMessage);
+   const isActive = useSelector(state => getIsActiveSelector(state));
+   const errorMessage = useSelector(state => getErrorMessageSelector(state));
 
    const handleSubmit = (data) => {
       dispatch(login(data));

@@ -1,5 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import {
+	getSelectedServicesSelector
+} from '../../redux/selectors/products-selector.js';
+import {
+	getUserDataSelector
+} from '../../redux/selectors/user-selector.js';
 import s from './Header.module.css';
 
 import Wrapper from '../common/Wrapper/Wrapper';
@@ -9,7 +15,9 @@ import SearchPanel from '../common/SearchPanel/SearchPanel';
 import UserPanel from '../common/UserPanel/UserPanel';
 
 const Header = (props) => {
-	const selectedServices = useSelector(state => state.products.selectedServices);
+	const selectedServices = useSelector(state => getSelectedServicesSelector(state));
+	const profile = useSelector(state => getUserDataSelector(state));
+   const username = profile ? profile.username : 'Войти';
 	const basketItems = Object.keys(selectedServices).length;
 
 	return (
@@ -30,7 +38,7 @@ const Header = (props) => {
 							<SearchPanel />
 						</div>
 						<div className={s.user}>
-							<UserPanel />
+							<UserPanel username={username} />
 						</div>
 					</div>
 				</div>
