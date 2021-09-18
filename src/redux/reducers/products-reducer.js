@@ -1,7 +1,7 @@
 import { productsAPI } from '../../api/api.js';
 
 const productsReducerID = 'laundry-website/productsReducer';
-const SET_CATEGORIES = `${productsReducerID}/SET_CATEGORIES`;   //Categories
+const SET_CATEGORIES = `${productsReducerID}/SET_CATEGORIES`;
 const SET_PRODUCTS = `${productsReducerID}/SET_PRODUCTS`;
 const SET_BASKET_LIST = `${productsReducerID}/SET_BASKET_LIST`;
 const FINISH_SHOPPING = `${productsReducerID}/FINISH_SHOPPING`;
@@ -25,9 +25,7 @@ const productsReducer = (state = initialState, action) => {
          return { ...state, basketList: action.basketList };
       }
       case FINISH_SHOPPING: {
-         return {
-            ...state, basketList: [], selectedServices: {}
-         };
+         return { ...state, basketList: [], selectedServices: {} };
       }
       default: return state;
    }

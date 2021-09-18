@@ -23,6 +23,7 @@ const Categories = (props) => {
 
    useEffect(() => {
       dispatch(setCategories());
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
 
    return (

@@ -29,6 +29,7 @@ export const loginThunkCreater = (data) => {
    return async (dispatch) => {
       try {
          const response = await authAPI.getTokenRequest(data);
+         // eslint-disable-next-line
          const tokenVerify = await authAPI.verifyTokenRequest(response.access);
          localStorage.setItem('token', response.access);
          dispatch(setTokenAC(response.access));

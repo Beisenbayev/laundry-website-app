@@ -18,6 +18,7 @@ const Basket = (props) => {
    const dispatch = useDispatch();
    const basketList = useSelector(state => state.products.basketList);
    const selectedServices = useSelector(state => state.products.selectedServices);
+   
    const [shopPanelState, setShopPanelState] = useState(false);
    const itemsLength = basketList.length;
    let totalPrice = 0;
@@ -43,6 +44,7 @@ const Basket = (props) => {
 
    useEffect(() => {
       dispatch(setBasketProducts());
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, []);
 
    return (

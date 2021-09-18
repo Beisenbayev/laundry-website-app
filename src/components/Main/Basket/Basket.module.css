@@ -27,6 +27,7 @@
 .shopPanel {
   min-width: 405px;
   max-width: 405px;
+  max-height: 225px;
   padding: 17px;
   background: #FFFFFF;
   color: #172853;

@@ -17,6 +17,7 @@ const Profile = (props) => {
    const history = useHistory();
    const dispatch = useDispatch();
    const profile = useSelector(state => state.profile.userData);
+   
    const username = profile.username;
    const notifyState = profile.settings.notify;
 

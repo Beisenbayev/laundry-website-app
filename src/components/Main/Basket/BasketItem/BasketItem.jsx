@@ -49,6 +49,7 @@ const BasketItem = (props) => {
             </div>
             <div className={s.info}>
                <h3>{props.name}</h3>
+
                <div className={s.about}>
                   <p className={s.duration}>Срок доставки / <b>{secondToDay(props.duration)} дня</b></p>
                   <div className={s.quantityPanel}>
@@ -60,6 +61,7 @@ const BasketItem = (props) => {
                   </div>
                   <b className={s.price}>{props.price} тг</b>
                </div>
+               
             </div>
          </div>
 

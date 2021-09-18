@@ -36,6 +36,7 @@ const Services = (props) => {
       return () => {
          localStorage.setItem('selectedServices', JSON.stringify(selectedServices));
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [categoryId]);
 
    return (

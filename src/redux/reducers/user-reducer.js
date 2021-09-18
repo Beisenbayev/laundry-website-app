@@ -21,7 +21,7 @@ const userReducer = (state = initialState, action) => {
       }
       case SET_USER_SETTINGS: {
          return {
-            ...state, 
+            ...state,
             userData: { ...state.userData, settings: action.settings }
          }
       }
