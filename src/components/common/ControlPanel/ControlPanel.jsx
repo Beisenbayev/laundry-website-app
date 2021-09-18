@@ -14,9 +14,9 @@ export const CloseButton = (props) => {
    );
 }
 
-export const DescriptionButton = (props) => {
+export const DescriptionButton = ({ className, ...props }) => {
    return (
-      <button className={cn(s.button, s.DescriptionButton)} {...props}>
+      <button className={cn(s.button, s.DescriptionButton, className)} {...props}>
          <FaQuestion />
       </button>
    );

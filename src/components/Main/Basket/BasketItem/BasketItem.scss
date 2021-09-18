@@ -1,0 +1,90 @@
+.block {
+   position: relative;
+   display: flex;
+   max-height: 125px;
+   padding: 30px 35px 35px 50px;
+   border-radius: 8px;
+   background: #FFFFFF;
+}
+
+.picture {
+   width: 75px;
+   min-width: 75px;
+   max-width: 75px;
+   height: calc(100% + 65px);
+   margin: -30px 0 0 0;
+
+   img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+   }
+}
+
+.info {
+   margin-left: 40px;
+
+   h3 {
+      font-size: 14px;
+      font-weight: 500;
+      color: #172853;
+   }
+}
+.about {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   margin-top: 10px;
+}
+.duration {
+   font-size: 14px;
+   font-weight: 500;
+   color: #B0B3BC;
+
+   b {
+      color: #172853;
+   }
+}
+.price {
+   font-size: 14px;
+   font-weight: 500;
+   color: #172853;
+}
+
+.quantityPanel {
+   display: flex;
+   align-items: center;
+   margin: 0 60px 0 45px;
+   font-size: 14px;
+   i {
+      height: 30px;
+      font-size: 30px;
+      cursor: pointer;
+   }
+   b {
+      width: 45px;
+      text-align: center;
+   }
+}
+
+.hintButton {
+   left: 0;
+   top: 0;
+   border-radius: 8px 0 !important;
+}
+
+.hintWindow {
+   padding: 10px 3px 20px;
+   color: #172853;
+
+   h3 {
+      margin-bottom: 25px;
+      font-size: 20px;
+      font-weight: 700;
+   }
+
+   p {
+      line-height: 20px;
+      white-space: pre-line;
+   }
+}
