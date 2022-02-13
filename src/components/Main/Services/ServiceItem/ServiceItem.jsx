@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { secondToDay } from '../../../../utils/timeConverter.js';
+import { secondToDay } from '../../../../utils/timeConverter.ts';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import {
    getSelectedServicesSelector

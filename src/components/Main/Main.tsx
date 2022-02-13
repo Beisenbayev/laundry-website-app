@@ -10,7 +10,9 @@ import Search from './Search/Search';
 import Basket from './Basket/Basket';
 import Profile from './Profile/Profile';
 
-const Main = (props) => {
+interface Props {};
+
+const Main: React.FC<Props> = (props) => {
    return (
       <main className={s.block}>
          <Wrapper>
